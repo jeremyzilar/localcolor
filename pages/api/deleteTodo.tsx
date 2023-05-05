@@ -1,8 +1,9 @@
-import { table } from './utils/airtable.js';
+import { NextApiRequest, NextApiResponse } from 'next';
+import { table } from './utils/airtable';
 import auth0 from './utils/auth0';
-import OwnsRecord from './middleware/OwnsRecord.js';
+import OwnsRecord from './middleware/OwnsRecord';
 
-const handler = async (req, res) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const { id } = req.body;
 
     try {

@@ -1,6 +1,8 @@
 import auth0 from '../utils/auth0';
-import { table } from '../utils/airtable.js';
-const ownsRecord = (handler) => async (req, res) => {
+import { table } from '../utils/airtable';
+import { NextApiRequest, NextApiResponse } from 'next';
+
+const ownsRecord = (handler) => async (req: NextApiRequest, res: NextApiResponse) => {
     const { user } = await auth0.getSession(req);
 
     if (!user) {

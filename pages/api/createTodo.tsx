@@ -1,7 +1,8 @@
-import { table } from './utils/airtable.js';
+import { NextApiRequest, NextApiResponse } from 'next';
+import { table } from './utils/airtable';
 import auth0 from './utils/auth0';
 
-export default auth0.requireAuthentication(async (req, res) => {
+export default auth0.requireAuthentication(async (req: NextApiRequest, res: NextApiResponse) => {
     const { user } = await auth0.getSession(req);
 
     const { description } = req.body;

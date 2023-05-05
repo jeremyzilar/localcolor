@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-import { TodosProvider } from '../contexts/TodosContext.js';
+import { TodosProvider } from '../contexts/TodosContext';
 import '../styles/index.css';
 
 function MyApp({ Component, pageProps }) {

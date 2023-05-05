@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react"
-import { TodosContext } from "../contexts/TodosContext.js"
+import { TodosContext } from "../contexts/TodosContext"
 
 export default function Todo({ todo }) {
   const { updateTodo, deleteTodo } = useContext(TodosContext)
